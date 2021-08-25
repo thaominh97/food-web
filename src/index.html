@@ -21,9 +21,9 @@
 <body>
     <!-- Header -->
     <header>
-        <a href="#" class="logo"><i class="fas fa-utensils"></i></a>
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>MT-inc.</a>
         <nav class="navbar">
-            <a href="#home">Home</a>
+            <a href="#home" class="active">Home</a>
             <a href="#dishes">Dishes</a>
             <a href="#about">About</a>
             <a href="#menu">Menu</a>
@@ -31,16 +31,88 @@
             <a href="#order">Order</a>
         </nav>
         <div class="icons">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-search"></i>
-            <a href="" class="fas fa-heart"></a>
-            <a href="" class="fas fa-shopping-cart"></a>
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="" class="fas fa-heart" id="heart-icon"></a>
+            <a href="" class="fas fa-shopping-cart" id="cart-icon"></a>
         </div>
-
     </header>
+    <!-- search form -->
+    <form action="" id="search-form">
+        <input type="text" placeholder="Search here..." id="search-box">
+        <label for="search-box" class="fas fa-search" id="search-btn"></label>
+    </form>
+    <!-- home section -->
+    <section class="home" id="home">
+        <div class="swiper mySwiper home-slide">
+            <div class="swiper-wrapper wrapper">
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Our Special Dish</span>
+                        <h3>Spicy Pizza</h3>
+                        <p>"Marinara sauce, basil, italian sausage, roma tomatoes, olives, and pesto"</p>
+                        <a href="#" class="btn">Order now</a>
+                    </div>
+                    <div class="image">
+                        <img src="./img/product2.png" alt="dish">
 
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Our Special Dish</span>
+                        <h3>Spicy Pizza</h3>
+                        <p>"Marinara sauce, basil, italian sausage, roma tomatoes, olives, and pesto"</p>
+                        <a href="#" class="btn">Order now</a>
+                    </div>
+                    <div class="image">
+                        <img src="./img/product3.png" alt="dish">
 
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Our Special Dish</span>
+                        <h3>Spicy Pizza</h3>
+                        <p>"Marinara sauce, basil, italian sausage, roma tomatoes, olives, and pesto"</p>
+                        <a href="#" class="btn">Order now</a>
+                    </div>
+                    <div class="image">
+                        <img src="./img/pizza4.png" alt="dish">
 
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Our Special Dish</span>
+                        <h3>Spicy Pizza</h3>
+                        <p>"Marinara sauce, basil, italian sausage, roma tomatoes, olives, and pesto"</p>
+                        <a href="#" class="btn">Order now</a>
+                    </div>
+                    <div class="image">
+                        <img src="./img/translate2.png" alt="dish">
+
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Our Special Dish</span>
+                        <h3>Spicy Pizza</h3>
+                        <p>"Marinara sauce, basil, italian sausage, roma tomatoes, olives, and pesto"</p>
+                        <a href="#" class="btn">Order now</a>
+                    </div>
+                    <div class="image">
+                        <img src="./img/translate3.png" alt="dish">
+
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <!--custom main.js file-->
     <script src="main.js"></script>

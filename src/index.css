@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap");
+
+:root {
+    --black: rgb(71, 70, 70);
+    --white: #fff;
+    --green: #136b2d;
+    --orange: rgb(252, 121, 33);
+    --light: #eee;
+    --blue: rgb(60, 60, 134);
+    --light-blue: rgb(141, 141, 221);
+    --border: rgb(133, 131, 131);
+    --box-shadow: rgba(228, 224, 224, 0.8);
+}
+* {
+    font-family: Nunito, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+/* header style */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 99;
+
+    background: var(--white);
+    padding: 1rem 5%;
+    font-size: 1.7rem;
+}
+
+header .logo {
+    font-size: 2.5rem;
+    color: var(--black);
+    font-weight: bolder;
+}
+header .logo i {
+    color: var(--orange);
+    margin-right: 0.5rem;
+}
+header .navbar a {
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    color: var(--black);
+    font-weight: 600;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+}
+header .navbar a.active,
+header .navbar a:hover {
+    color: var(--white);
+    background: var(--orange);
+}
+header .icons i,
+header .icons a {
+    cursor: pointer;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    line-height: 4.5rem;
+    text-align: center;
+    background: var(--light);
+    font-size: 1.7rem;
+    color: var(--black);
+    margin-left: 0.5rem;
+}
+
+header .icons i:hover,
+header .icons a:hover {
+    color: var(--white);
+    background: var(--orange);
+    transform: rotate(360deg);
+}
+
+header .icons i#menu-bars {
+    display: none;
+}
+
+/* search form */
+#search-form {
+    height: 15vh;
+    width: 100%;
+    margin-top: -20vh;
+    background: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    
+}
+#search-form.active {
+    margin-top: 0;
+}
+#search-form #search-box {
+    background: none;
+    border-bottom: 1px solid var(--border);
+    height: 3.5rem;
+    width: 50%;
+    padding: .5rem 3rem;
+    margin-top: auto;
+}
+#search-form #search-box::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+#search-form label {
+    cursor: pointer;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    line-height: 4.5rem;
+    text-align: center;
+    background: var(--light);
+    font-size: 1.7rem;
+    color: var(--black);
+    margin-left: 0.5rem;
+    margin-top: auto;
+}
+#search-form label:hover {
+    background: var(--orange);
+}
+
+/* home section */
+section {
+    margin-top: 3rem; 
+    padding: 3rem 9rem;
+
+}
+.home .home-slide .wrapper {
+    margin-bottom: 5rem;
+    
+
+}
+.home .home-slide .slide {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 9rem;
+}
+.home .home-slide .slide .content{
+    flex: 1 1 45rem;
+}
+.home .home-slide .slide .image {
+    flex: 1 1 45rem;
+
+}
+.home .home-slide .slide .content span {
+    font-size: 2rem;
+    color: var(--black);
+    font-weight: bolder;
+} 
+.home .home-slide .slide .content h3{
+    font-size: 5.5rem;
+    color: var(--blue);
+    margin: 1rem 0;
+}
+.home .home-slide .slide .content p{
+    font-size: 1.7rem;
+    color: var(--light-blue);
+    margin: 2rem 0;
+
+}
+.home .home-slide .slide .content .btn {
+    font-size: 1.7rem;
+    background: var(--blue);
+    color: var(--white);
+    padding: .5rem 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: none;
+}
+.home .home-slide .slide .content .btn:hover {
+    cursor: pointer;
+    background: var(--orange);
+
+}
+.home .home-slide .slide .image img {
+    width: 40vw;
+    
+}
+/* media */
+@media (max-width: 1000px) {
+    html {
+        font-size: 55%;
+    }
+    header .navbar {
+        padding: 1.5rem;
+        margin: 1rem;
+        background: var(--white);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    }
+    header .navbar a {
+        display: block;
+        padding: 1rem;
+        margin: 1rem;
+        font-size: 1.5rem;
+        background: var(--light);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+    }
+    header .icons i#menu-bars {
+        display: inline-block;
+    }
+}
