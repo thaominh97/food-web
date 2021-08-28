@@ -87,14 +87,12 @@ header .icons a {
     color: var(--black);
     margin-left: 0.5rem;
 }
-
 header .icons i:hover,
 header .icons a:hover {
     color: var(--white);
     background: var(--orange);
     transform: rotate(360deg);
 }
-
 header .icons i#menu-bars {
     display: none;
 }
@@ -178,7 +176,7 @@ header .icons i#menu-bars {
     margin: 2rem 0;
 
 }
-.home .home-slide .slide .content .btn {
+.btn {
     font-size: 1.7rem;
     background: var(--blue);
     color: var(--white);
@@ -197,15 +195,148 @@ header .icons i#menu-bars {
     height: 50%;
     border-radius: 1rem;
 }
-.home .home-slide .swiper-pagination {
-   left: -10%;
-   
 
+/* section dishs style */
+.dishs {
+    margin-top: 2rem;
+    text-align: center;
+    background: var(--box-shadow);
 }
-
-/* section dish style */
-
-
+.dishs h3 {
+    font-size: 3rem;
+    color: var(--blue);
+    padding: 1rem;
+}
+.dishs h1 {
+    font-size: 4rem;
+    color: var(--black);
+    padding-bottom: 2rem;
+}
+.dishs .box-container {
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    gap: 5rem 5rem;
+}
+.dishs .box-container .box {
+    background: var(--white);
+    color: var(--blue);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: 1px solid var(--light-blue);
+    position: relative;
+    overflow: hidden;
+    line-height: 3.5rem;
+    font-size: 2rem;
+}
+.dishs .box-container .box img{
+    width: 35vw;
+}
+.dishs .box-container .box .fa-heart,
+.dishs .box-container .box .fa-eye {
+    position: absolute;
+    top: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--light);
+    color: var(--black);
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+.dishs .box-container .box .fa-heart:hover,
+.dishs .box-container .box .fa-eye:hover {
+    background: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+}
+.dishs .box-container .box .fa-heart{
+    right: -10rem;
+}
+.dishs .box-container .box .fa-eye {
+    left: -10rem;
+}
+.dishs .box-container .box:hover .fa-heart {
+    right: 4rem;
+}
+.dishs .box-container .box:hover .fa-eye {
+    left: 4rem;
+}
+.dishs .box-container .box h4{
+    font-size: 2.5rem;
+}
+.dishs .box-container .box .stars{
+    color: var(--orange);
+}
+.dishs .box-container .box span{
+    color: var(--orange);
+    font-weight: bolder;
+    margin-right: 1rem;
+}
+/* footer style */
+footer {
+    padding: 3rem 5rem;
+    border-top: 1px solid var(--box-shadow);
+}
+.footer .footer-container {
+    display: grid;
+    grid-template-columns: 20vw 20vw 30vw 20vw;
+    gap: 2rem;
+    align-items: center;
+    margin-left: 3rem;
+}
+.footer .footer-container .box {
+    display: flex;
+    flex-direction: column;
+}
+.footer .footer-container .box h4 {
+    font-size: 2rem;
+    color: var(--blue);
+    margin-bottom: 1rem;
+}
+.footer .footer-container .box .box-item {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 2rem;
+    margin: .5rem 0;
+}
+.footer .footer-container .box .box-item:hover {
+    color: var(--orange);
+    cursor: pointer;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.footer .footer-container .box .box-item .fa-facebook {
+    color: blue;
+}
+.footer .footer-container .box .box-item .fa-youtube {
+    color: red;
+}
+.footer .footer-container .box .box-item .fa-instagram {
+    color: var(--orange);
+    font-weight: bolder;
+}
+.footer .footer-container .logo {
+    font-size: 4rem;
+    color: var(--black);
+    font-weight: bolder;
+}
+.footer .footer-container .logo i {
+    color: var(--orange);
+    margin-right: 0.5rem;
+}
+.footer .credit {
+    font-size: 1.5rem;
+    color: var(--black);
+    text-align: center;
+    margin-top: 3rem;
+}
+.footer .credit span {
+    font-size: 2rem;
+    color: var(--light-blue);
+    margin-left: 0.5rem;
+}
 /* media */
 @media (max-width: 1000px) {
     html {
@@ -241,5 +372,12 @@ header .icons i#menu-bars {
     }
     .home .home-slide .slide .content h3 {
         font-size: 3.5rem;
+    }
+    .footer .footer-container {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 3rem;
+    }
+    .dishs .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     }
 }
